@@ -32,7 +32,7 @@ public class Courir extends Action {
 
     }
 
-    public static void initIMAGES(String chemin){
+    public static void initIMAGES(){
         File f;
         for (int i = 1; i <= 8; i++) {
             f = new File("../ressources/images/colo/Course/course" + i + ".png");

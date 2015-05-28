@@ -1,22 +1,22 @@
 {   "Unlocked": "true",
 	"Obstacles": [
-	{"imageOK":"../ressources/images/Obstacle/chien.gif", "imageKO":"../ressources/images/Obstacle/chien KO.png", "posX":"600", "posY":"470", "width":"250", "height":"250", "key":"38", "sonOK":"../ressources/sons/chien.wav", "sonKO":"", "isFin":"false"},
-	{"imageOK":"../ressources/images/Obstacle/chien.gif", "imageKO":"../ressources/images/Obstacle/chien KO.png", "posX":"1250", "posY":"470", "width":"250", "height":"250", "key":"38", "sonOK":"../ressources/sons/chien.wav", "sonKO":"", "isFin":"false"},
-	{"imageOK":"0", "key":"-7", "sonOK":"../ressources/sons/Histoire/Foret/31Singe.wav", "posX":"1900", "posY":"1", "width":"1", "height":"1"},
+	{"imageOK":"0", "key":"-35", "sonOK":"../ressources/sons/Histoire/introduction.wav", "posX":"501", "posY":"1", "width":"1", "height":"1"},
+	{"imageOK":"0", "key":"-3", "sonOK":"../ressources/sons/Histoire/Foret/1livre.wav", "posX":"502", "posY":"1", "width":"1", "height":"1"},
+	{"imageOK":"0", "key":"-11", "sonOK":"../ressources/sons/Histoire/Foret/1.wav", "posX":"503", "posY":"1", "width":"1", "height":"1"},
+	{"imageOK":"0", "key":"-1", "sonOK":"../ressources/sons/musique1.wav", "posX":"504", "posY":"1", "width":"1", "height":"1"},
+	{"imageOK":"0", "key":"0", "sonOK":"../ressources/sons/chien.wav", "posX":"505", "posY":"1", "width":"1", "height":"1"},
+	{"imageOK":"0", "key":"-3", "sonOK":"../ressources/sons/Instructions/tutoChien.wav", "posX":"506", "posY":"1", "width":"1", "height":"1"},
+	{"imageOK":"../ressources/images/Obstacle/chien.gif", "imageKO":"../ressources/images/Obstacle/chien KO.png", "posX":"600", "posY":"480", "width":"200", "height":"200", "key":"38", "sonOK":"../ressources/sons/chien.wav", "sonKO":"", "isFin":"false"},
+	{"imageOK":"../ressources/images/Obstacle/chien.gif", "imageKO":"../ressources/images/Obstacle/chien KO.png", "posX":"1250", "posY":"480", "width":"200", "height":"200", "key":"38", "sonOK":"../ressources/sons/chien.wav", "sonKO":"", "isFin":"false"},
+	{"imageOK":"0", "key":"-10", "sonOK":"../ressources/sons/Histoire/Foret/31Singe.wav", "posX":"2000", "posY":"1", "width":"1", "height":"1"},
 	{"imageOK":"0", "key":"-2", "sonOK":"../ressources/sons/singe.wav", "posX":"2010", "posY":"1", "width":"1", "height":"1"},
 	{"imageOK":"0", "key":"-7", "sonOK":"../ressources/sons/Instructions/tutoSinge.wav", "posX":"2100", "posY":"1", "width":"1", "height":"1"},
-	{"imageOK":"../ressources/images/Obstacle/singe.png", "imageKO":"../ressources/images/Obstacle/singe KO.png", "posX":"2475", "posY":"470", "width":"250", "height":"250", "key":"32", "sonOK":"../ressources/sons/singe.wav", "sonKO":"", "isFin":"false"},
-	{"imageOK":"../ressources/images/Obstacle/singe.png", "imageKO":"../ressources/images/Obstacle/singe KO.png", "posX":"3530", "posY":"470", "width":"250", "height":"250", "key":"32", "sonOK":"../ressources/sons/singe.wav", "sonKO":"", "isFin":"false"},
-	{"imageOK":"../ressources/images/Obstacle/chien.gif", "imageKO":"../ressources/images/Obstacle/chien KO.png", "posX":"4720", "posY":"470", "width":"250", "height":"250", "key":"38", "sonOK":"../ressources/sons/chien.wav", "sonKO":"", "isFin":"false"},
-	{"imageOK":"../ressources/images/Obstacle/singe.png", "imageKO":"../ressources/images/Obstacle/singe KO.png", "posX":"5910", "posY":"470", "width":"250", "height":"250", "key":"32", "sonOK":"../ressources/sons/singe.wav", "sonKO":"", "isFin":"false"},
-	{"imageOK":"../ressources/images/Obstacle/chien.gif", "imageKO":"../ressources/images/Obstacle/chien KO.png", "posX":"7100", "posY":"470", "width":"250", "height":"250", "key":"38", "sonOK":"../ressources/sons/chien.wav", "sonKO":"", "isFin":"true"}
-	],
-	"Sons": [
-	{"index": "0", "path":"../ressources/sons/Histoire/introduction.wav"},
-	{"index": "1", "path":"../ressources/sons/Histoire/Foret/1 livre.wav"},
-	{"index": "3", "path":"../ressources/sons/Histoire/Foret/1.wav"},
-	{"index": "4", "path":"../ressources/sons/Histoire/Foret/1 chien.wav"},
-	{"index": "7", "path":"../ressources/sons/Histoire/Foret/4finForet.wav"}
+	{"imageOK":"../ressources/images/Obstacle/singe.png", "imageKO":"../ressources/images/Obstacle/singe KO.png", "posX":"2475", "posY":"200", "width":"150", "height":"150", "key":"32", "sonOK":"../ressources/sons/singe.wav", "sonKO":"", "isFin":"false"},
+	{"imageOK":"../ressources/images/Obstacle/singe.png", "imageKO":"../ressources/images/Obstacle/singe KO.png", "posX":"3830", "posY":"200", "width":"150", "height":"150", "key":"32", "sonOK":"../ressources/sons/singe.wav", "sonKO":"", "isFin":"false"},
+	{"imageOK":"../ressources/images/Obstacle/chien.gif", "imageKO":"../ressources/images/Obstacle/chien KO.png", "posX":"4720", "posY":"480", "width":"200", "height":"200", "key":"38", "sonOK":"../ressources/sons/chien.wav", "sonKO":"", "isFin":"false"},
+	{"imageOK":"../ressources/images/Obstacle/singe.png", "imageKO":"../ressources/images/Obstacle/singe KO.png", "posX":"5910", "posY":"200", "width":"150", "height":"150", "key":"32", "sonOK":"../ressources/sons/singe.wav", "sonKO":"", "isFin":"false"},
+	{"imageOK":"../ressources/images/Obstacle/chien.gif", "imageKO":"../ressources/images/Obstacle/chien KO.png", "posX":"7100", "posY":"480", "width":"200", "height":"200", "key":"38", "sonOK":"../ressources/sons/chien.wav", "sonKO":"", "isFin":"true"},
+	{"imageOK":"0", "key":"-2", "sonOK":"../ressources/sons/singe.wav", "posX":"2010", "posY":"1", "width":"1", "height":"1"}
 	],
 	"backGround":"../ressources/images/backGround/Plaine.png"
 }

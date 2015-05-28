@@ -29,23 +29,26 @@ public class Crier extends Action {
             }
             imageBAS++;
             interval = 0;
-        }
-        if(imageBAS % 3 == 0) {
-            if (sens) {
-                imageHAUT++;
-            } else{
-                if(imageHAUT == 0){
-                    endAction = true;
+
+
+            if(imageHAUT == 5){
+                sens = false;
+            }
+            if(imageBAS % 4 == 1) {
+                if (sens) {
+                    imageHAUT++;
+                } else{
+                    if(imageHAUT == 0){
+                        endAction = true;
+                    }
+                    imageHAUT--;
                 }
-                imageHAUT--;
             }
         }
-        if(imageHAUT == 5){
-            sens = false;
-        }
+
     }
 
-    public static void initIMAGES(String chemin){
+    public static void initIMAGES(){
         File f;
         for (int i = 1; i <= 8; i++) {
             f = new File("../ressources/images/colo/Course/course" + i + ".png");
@@ -57,6 +60,7 @@ public class Crier extends Action {
         }
         for (int i = 0; i <= 5; i++) {
             f = new File("../ressources/images/colo/Crie/crie" + i + ".png");
+            System.out.println("ImageHaut!");
             try {
                 IMAGESHAUT.add(ImageIO.read(f));
             } catch (IOException e) {

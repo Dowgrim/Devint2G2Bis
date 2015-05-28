@@ -66,6 +66,9 @@ public class Player extends JPanel{
 
     public void hit(){
         carac.setLife(carac.getLife() - 1);
+        if(carac.getLife() < 0){
+            new Loose();
+        }
     }
 
     public void gg(int score) {
@@ -76,4 +79,7 @@ public class Player extends JPanel{
         return action;
     }
 
+    public int getlife() {
+        return carac.getLife();
+    }
 }

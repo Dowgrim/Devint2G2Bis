@@ -31,14 +31,17 @@ public class Level extends JFrame {
     private BackGroundL backGround;
     private int position = 0;
 
-    private HashMap<Integer, String> sons;
+    private boolean sauterSons;
+
+
+    private ArrayList<JPanel> hearts;
 
     private JLabel score;
 
-    public Level(ArrayList<Obstacle> obstacles, HashMap<Integer, String> sons, String backGr, Difficulty dif) {
+    public Level(ArrayList<Obstacle> obstacles, String backGr, Difficulty dif, boolean sauterSons) {
 
+        this.sauterSons = sauterSons;
         final Defilement t = new Defilement();
-        this.sons = sons;
         difficulty = dif;
         items = new ArrayList<>();
         setSize(1200, 750);
@@ -74,9 +77,6 @@ public class Level extends JFrame {
                         if (!t.isAlive()) {
                             t.start();
                         }
-                        /*SIVOXDevint s = new SIVOXDevint();
-
-                        s.playWav(sons.get(0), false);*/
                         break;
                     }
                     case KeyEvent.VK_1: {
@@ -97,6 +97,7 @@ public class Level extends JFrame {
                     }
                     case KeyEvent.VK_SPACE: {
                         items.get(0).setAction(new Banana());
+                        player.setKeyPressed(e.getKeyCode());
                         break;
                     }
                 }
@@ -106,6 +107,13 @@ public class Level extends JFrame {
         player = new Player(difficulty.getLife());
         contentPane.add(player);
         player.forward();
+
+        hearts = new ArrayList<>();
+        for(int i = 0; i < difficulty.getLife(); i++){
+            hearts.add(new Heart());
+            contentPane.add(hearts.get(i));
+            hearts.get(i).setBounds(i*50, 0, 50, 50);
+        }
 
         score = new JLabel(player.getScore() + "");
         score.setFont(new Font("Arial", Font.PLAIN, 40));
@@ -172,16 +180,7 @@ public class Level extends JFrame {
             position++;
             player.forward();
             for (Obstacle o : obstacles) {
-                if(o.getKey() < 0 && o.getCaracX() == (position + 300)){
-                    o.playSound();
-                    try {
-                        Thread.sleep(o.getKey()*-1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else {
-                    o.forward(position);
+                 o.forward(position, sauterSons);
                     if ((o.getCaracX() == (position + 150))) {
                         if (o.isFin()) {
                             new Win();
@@ -212,7 +211,11 @@ public class Level extends JFrame {
                             score.setText(player.getScore() + "");
                             player.setKeyPressed(-1);
                         } else {
-                            player.hit();
+                            if (o.getKey() > 0) {
+                                player.hit();
+                                System.out.println("lol");
+                                hearts.get(player.getlife()).setVisible(false);
+                            }
                         }
                     } else {
                         if(o.getCaracX() == (position + 300) && o.getKey() == player.getKeyPressed()) {
@@ -221,7 +224,7 @@ public class Level extends JFrame {
                             player.setKeyPressed(-1);
                         }
                     }
-                }
+
             }
             for(Item i : items){
                 i.forward();

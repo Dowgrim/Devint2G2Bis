@@ -34,10 +34,10 @@ public class MenuChoixDifficulte extends MenuAbstrait {
      */
     protected void lancerOption(int i) {
         switch (i){  
-        case 0 : new Game(Difficulty.VeryEasy);break;
-        case 1 : new Game(Difficulty.Easy);break;
-        case 2 : new Game(Difficulty.Normal);break;
-        case 3 : new Game(Difficulty.Difficile);break;
+        case 0 : new Game(Difficulty.VeryEasy, false);break;
+        case 1 : new Game(Difficulty.Easy, false);break;
+        case 2 : new Game(Difficulty.Normal, false);break;
+        case 3 : new Game(Difficulty.Difficile, false);break;
         case 4 : new MenuJeu(nomJeu);break;
         default: System.err.println("action non définie");
         }

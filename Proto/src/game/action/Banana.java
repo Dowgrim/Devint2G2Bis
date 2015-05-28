@@ -37,7 +37,7 @@ public class Banana extends Action {
         }
     }
 
-    public static void initIMAGES(String chemin){
+    public static void initIMAGES(){
         File f;
         for (int i = 0; i <= 5; i++) {
             f = new File("../ressources/images/Banana/Banane" + i + ".png");

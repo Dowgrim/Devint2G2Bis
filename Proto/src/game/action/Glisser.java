@@ -28,7 +28,7 @@ public class Glisser extends Action {
         }
     }
 
-    public static void initIMAGES(String chemin){
+    public static void initIMAGES(){
         File f = new File("../ressources/images/colo/Glissade2.png");
         try {
             IMAGES.add(ImageIO.read(f));

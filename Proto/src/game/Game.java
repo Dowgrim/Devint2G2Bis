@@ -1,10 +1,7 @@
 package game;
 
 import creatingConfig.FileInteraction;
-import game.action.Banana;
-import game.action.Courir;
-import game.action.Glisser;
-import game.action.Sauter;
+import game.action.*;
 import game.item.Obstacle;
 import game.item.ItemCarac;
 import game.Difficulty;
@@ -27,17 +24,21 @@ public class Game {
     private Difficulty difficulty = Difficulty.LOLLaisseTomber;
     private Level level;
 
+    private boolean sauterSons;
+
     public static Game getINSTANCE(){
         return INSTANCE;
     }
 
 
-    public Game(Difficulty d){
-        Courir.initIMAGES("PetiteFille");
-        Glisser.initIMAGES("lol");
-        Sauter.initIMAGES("lol");
-        Banana.initIMAGES("lol");
+    public Game(Difficulty d, boolean s){
+        Courir.initIMAGES();
+        Glisser.initIMAGES();
+        Sauter.initIMAGES();
+        Banana.initIMAGES();
+        Crier.initIMAGES();
         difficulty = d;
+        sauterSons = s;
         INSTANCE = this;
     }
 
@@ -66,7 +67,7 @@ public class Game {
         sons.put(-2, "../ressources/sons/Histoire/Foret/1.wav");
 
 
-        level = new Level(obstacles, sons, "../ressources/images/backGround/Plaine.png", difficulty);
+        level = new Level(obstacles, "../ressources/images/backGround/Plaine.png", difficulty, sauterSons);
     }
 
     public void launchLevelV2(int l){
@@ -78,13 +79,7 @@ public class Game {
             obj = array.getJSONObject(i);
             obstacles.add(new Obstacle(obj.getString("imageOK"), new ItemCarac(obj.getInt("posX"), obj.getInt("posY"), obj.getInt("width"), obj.getInt("height")), obj.getInt("key"), obj.getString("sonOK")));
         }
-        HashMap<Integer, String> sons = new HashMap<Integer, String>();
-        array = jsonLvl.getJSONArray("Sons");
-        for(int i = 0; i < array.length(); i++){
-            obj = array.getJSONObject(i);
-            sons.put(obj.getInt("index"), obj.getString("path"));
-        }
-        level = new Level(obstacles, sons, jsonLvl.getString("backGround"), difficulty);
+        level = new Level(obstacles, jsonLvl.getString("backGround"), difficulty, sauterSons);
     }
 
     public Difficulty getDifficulty(){
@@ -93,7 +88,7 @@ public class Game {
 
     public static void main(String[] args) {
         //new menu.MenuJeu("AnimalEscape");
-        Game game = new Game(Difficulty.Easy);
+        Game game = new Game(Difficulty.Normal, true);
         game.launchLevelV2(1);
     }
 

@@ -90,10 +90,21 @@ public class Obstacle extends JPanel {
         return fin;
     }
 
-    public void forward(int position){
+    public void forward(int position, boolean s){
         if (this.getCaracX() < position + 2000 && this.getCaracX() > position - 1000) {
-            if (this.getCaracX() == position + 500) {
-                this.playSound();
+            if (this.getCaracX() == position + 500){
+                if (getKey() < 0 && !s) {
+                    this.playSound();
+                    try {
+                        Thread.sleep(getKey() * -1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    if(getKey() >= 0){
+                        this.playSound();
+                    }
+                }
             }
         }
     }

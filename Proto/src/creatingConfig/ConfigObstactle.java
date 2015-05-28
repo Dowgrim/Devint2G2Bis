@@ -57,17 +57,8 @@ public abstract class ConfigObstactle {
         for(int i=0; i<obstacles.length();i++){
             obst.add(ConfigObstactle.configObstacle(obstacles.getJSONObject(i)));
         }
-        HashMap<Integer, String> sons = new HashMap<>();
-        JSONArray ss = level.getJSONArray("sons");
-        int pos;
-        String path;
-        for(int i=0; i<ss.length();i++){
-            pos = ss.getJSONObject(i).getInt("pos");
-            path = ss.getJSONObject(i).getString("path");
-            sons.put(pos, path);
-        }
-        path = level.getString("backGround");
-        l = new Level((ArrayList)obst, sons, path, dif);
+        String path = level.getString("backGround");
+        l = new Level((ArrayList)obst,  path, dif, false);
         return l;
     }
 }

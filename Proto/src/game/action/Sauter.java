@@ -54,25 +54,13 @@ public class Sauter extends Action {
         return IMAGES.get(image);
     }
 
-    public static void initIMAGES(String chemin){
+    public static void initIMAGES(){
         File f;
-        if(chemin.equals("troll")){
-            for(int i = 1; i <= 10; i++){
-                f = new File("../ressources/images/Perso/frame-"+i+".gif");
-                try {
-                    IMAGES.add(ImageIO.read(f));
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        else{
-                f = new File("../ressources/images/colo/saut1.png");
-                try {
-                    IMAGES.add(ImageIO.read(f));
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+        f = new File("../ressources/images/colo/saut1.png");
+        try {
+            IMAGES.add(ImageIO.read(f));
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
