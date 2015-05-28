@@ -1,0 +1,13 @@
+{   "Unlocked": "true",
+	"Obstacles": [
+	{"imageOK":"", "imageKO":"", "posX":"", "posY":"", "width":"", "height":"", "key":"", "sonOK":"", "sonKO":"", "isFin":""},
+	KeyEvent.VK_RIGHT = 39;
+	KeyEvent.VK_LEFT = 37;
+	KeyEvent.VK_DOWN = 40;
+	KeyEvent.VK_UP = 38;
+	KeyEvent.VK_SPACE = 32;
+	
+	{}
+	]
+	"backGround":""
+}

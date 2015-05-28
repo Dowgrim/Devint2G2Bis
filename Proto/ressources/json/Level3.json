@@ -1,0 +1,27 @@
+{   "Unlocked": "false",
+	"Obstacles": [
+		{"imageOK":"../ressources/images/Obstacle/aigle.png", "imageKO":"../ressources/images/Obstacle/aigle KO.png", "posX":"250", "posY":"300", "width":"100", "height":"100", "key":"39", "sonOK":"../ressources/sons/aigle.wav", "sonKO":"", "isFin":"false"},
+		{"imageOK":"../ressources/images/Obstacle/aigle.png", "imageKO":"../ressources/images/Obstacle/lion KO.png", "posX":"1250", "posY":"300", "width":"100", "height":"100", "key":"39", "sonOK":"../ressources/sons/aigle.wav", "sonKO":"", "isFin":"false"},
+		{"imageOK":"../ressources/images/Obstacle/chien.gif", "imageKO":"../ressources/images/Obstacle/chien KO.gif", "posX":"2475", "posY":"470", "width":"250", "height":"250", "key":"38", "sonOK":"../ressources/sons/chien.wav", "sonKO":"", "isFin":"false"},
+		{"imageOK":"../ressources/images/Obstacle/aigle.png", "imageKO":"../ressources/images/Obstacle/aigle KO.png", "posX":"3530", "posY":"300", "width":"100", "height":"100", "key":"40", "sonOK":"../ressources/sons/aigle.wav", "sonKO":"", "isFin":"false"},
+		{"imageOK":"../ressources/images/Obstacle/chien.gif", "imageKO":"../ressources/images/Obstacle/chien KO.png", "posX":"4720", "posY":"470", "width":"250", "height":"250", "key":"38", "sonOK":"../ressources/sons/chien.wav", "sonKO":"", "isFin":"false"},
+		{"imageOK":"../ressources/images/Obstacle/singe.png", "imageKO":"../ressources/images/Obstacle/singe KO.png", "posX":"5910", "posY":"470", "width":"250", "height":"250", "key":"32", "sonOK":"../ressources/sons/singe.wav", "sonKO":"", "isFin":"false"},
+		{"imageOK":"../ressources/images/Obstacle/serpent.png", "imageKO":"../ressources/images/Obstacle/serpent KO.png", "posX":"7100", "posY":"470", "width":"250", "height":"250", "key":"37", "sonOK":"../ressources/sons/serpent.wav", "sonKO":"", "isFin":"false"}
+		{"imageOK":"../ressources/images/Obstacle/lion.png", "imageKO":"../ressources/images/Obstacle/lion KO.png", "posX":"8250", "posY":"470", "width":"250", "height":"250", "key":"39", "sonOK":"../ressources/sons/lion.wav", "sonKO":"", "isFin":"false"},
+		{"imageOK":"../ressources/images/Obstacle/aigle.png", "imageKO":"../ressources/images/Obstacle/aigle KO.png", "posX":"9530", "posY":"300", "width":"100", "height":"100", "key":"40", "sonOK":"../ressources/sons/aigle.wav", "sonKO":"", "isFin":"false"},
+		{"imageOK":"../ressources/images/Obstacle/chien.gif", "imageKO":"../ressources/images/Obstacle/chien KO.png", "posX":"11720", "posY":"470", "width":"250", "height":"250", "key":"38", "sonOK":"../ressources/sons/chien.wav", "sonKO":"", "isFin":"true"}
+		{"imageOK":"../ressources/images/Obstacle/serpent.png", "imageKO":"../ressources/images/Obstacle/serpent KO.png", "posX":"13100", "posY":"470", "width":"250", "height":"250", "key":"37", "sonOK":"../ressources/sons/serpent.wav", "sonKO":"", "isFin":"false"}
+		{"imageOK":"../ressources/images/Obstacle/lion.png", "imageKO":"../ressources/images/Obstacle/lion KO.png", "posX":"15250", "posY":"470", "width":"250", "height":"250", "key":"39", "sonOK":"../ressources/sons/lion.wav", "sonKO":"", "isFin":"false"},
+		{"imageOK":"../ressources/images/Obstacle/singe.png", "imageKO":"../ressources/images/Obstacle/singe KO.png", "posX":"17910", "posY":"470", "width":"250", "height":"250", "key":"32", "sonOK":"../ressources/sons/singe.wav", "sonKO":"", "isFin":"false"},
+		{"imageOK":"../ressources/images/Obstacle/aigle.png", "imageKO":"../ressources/images/Obstacle/aigle KO.png", "posX":"18530", "posY":"300", "width":"100", "height":"100", "key":"40", "sonOK":"../ressources/sons/aigle.wav", "sonKO":"", "isFin":"false"},
+		{"imageOK":"../ressources/images/Obstacle/serpent.png", "imageKO":"../ressources/images/Obstacle/serpent KO.png", "posX":"19900", "posY":"470", "width":"250", "height":"250", "key":"37", "sonOK":"../ressources/sons/serpent.wav", "sonKO":"", "isFin":"true"}
+		
+	],
+	"Sons": [
+	{"index": "0", "path":"../ressources/sons/Histoire/Montagne/1.wav"},
+	{"index": "1", "path":"../ressources/sons/Histoire/Foret/21Aigle.wav"},
+	{"index": "2", "path":"../ressources/sons/Histoire/Foret/22 aigle.wav"},
+	{"index": "3", "path":"../ressources/sons/Histoire/Foret/23Aigle.wav"}
+	],
+	"backGround":"../ressources/images/backGround/Montagne.png"
+}
