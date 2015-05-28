@@ -15,8 +15,8 @@ public class Banana extends Action {
 
     private int image;
 
-    public Banana(int position){
-        shiftX = position;
+    public Banana(){
+        shiftX = 350;
         shiftY = 400;
     }
 
@@ -48,6 +48,15 @@ public class Banana extends Action {
             }
         }
 
+    }
+
+    @Override
+    public boolean onBonus(){
+        if(shiftY > 100 && shiftY < 300){
+            endAction = true;
+            return true;
+        }
+        return false;
     }
 
     @Override

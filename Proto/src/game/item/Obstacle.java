@@ -35,16 +35,16 @@ public class Obstacle extends JPanel {
 
 
     public Obstacle(String image, ItemCarac carac, int key, String sound){
-        if(image != null) {
+        if(!image.equals("0")) {
             File f = new File(image);
             try {
                 images.add(ImageIO.read(f));
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            this.carac = carac;
             this.setSize(carac.getWidth(), carac.getHeight());
         }
+        this.carac = carac;
         this.key = key;
         this.sound = sound;
     }

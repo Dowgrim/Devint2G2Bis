@@ -84,7 +84,6 @@ public class Game {
             obj = array.getJSONObject(i);
             sons.put(obj.getInt("index"), obj.getString("path"));
         }
-        System.out.println(jsonLvl.getString("backGround")+ " " + obstacles.get(3));
         level = new Level(obstacles, sons, jsonLvl.getString("backGround"), difficulty);
     }
 

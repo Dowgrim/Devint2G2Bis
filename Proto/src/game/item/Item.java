@@ -42,4 +42,8 @@ public class Item extends JPanel{
             action.forward();
         }
     }
+
+    public Action getAction() {
+        return action;
+    }
 }

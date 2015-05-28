@@ -74,9 +74,9 @@ public class Level extends JFrame {
                         if (!t.isAlive()) {
                             t.start();
                         }
-                        SIVOXDevint s = new SIVOXDevint();
+                        /*SIVOXDevint s = new SIVOXDevint();
 
-                        s.playWav(sons.get(0), false);
+                        s.playWav(sons.get(0), false);*/
                         break;
                     }
                     case KeyEvent.VK_1: {
@@ -95,8 +95,8 @@ public class Level extends JFrame {
 
                         break;
                     }
-                    case KeyEvent.VK_B: {
-                        items.get(0).setAction(new Banana(position));
+                    case KeyEvent.VK_SPACE: {
+                        items.get(0).setAction(new Banana());
                         break;
                     }
                 }
@@ -114,14 +114,16 @@ public class Level extends JFrame {
 
         this.obstacles = obstacles;
         for (Obstacle o : obstacles) {
-            contentPane.add(o);
-            o.setBounds(-400, 0, o.getCaracWidth(), o.getCaracHeight());
+            if(o.getKey() > 0) {
+                contentPane.add(o);
+                o.setBounds(-400, 0, o.getCaracWidth(), o.getCaracHeight());
+            }
         }
 
         Item banana = new Item(new ItemCarac(0, 0, 50, 50), null);
         items.add(banana);
         contentPane.add(banana);
-        banana.setBounds(-500, 0, 50, 50);
+        banana.setBounds(-500, 0, 80, 80);
 
         backGround = new BackGroundL(backGr);
         contentPane.add(backGround);
@@ -132,7 +134,9 @@ public class Level extends JFrame {
         while(true){
             player.afficher();
             for(Obstacle o : obstacles){
-                o.afficher(position);
+                if(o.getKey() > 0) {
+                    o.afficher(position);
+                }
             }
             for(Item i : items){
                 i.afficher();
@@ -165,52 +169,63 @@ public class Level extends JFrame {
 
         @Override
         public void run() {
-
             position++;
             player.forward();
             for (Obstacle o : obstacles) {
-                o.forward(position);
-                if((o.getCaracX() == (position + 150))) {
-                    if (o.isFin()) {
-                        new Win();
-                        this.cancel();
-                    }else {
-                        if ((player.getAction().onBonus())) {
-                            player.gg(1000);
-                            score.setText(player.getScore() + "");
-                        }
+                if(o.getKey() < 0 && o.getCaracX() == (position + 300)){
+                    o.playSound();
+                    try {
+                        Thread.sleep(o.getKey()*-1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
                     }
                 }
-                if (o.getCaracX() == (position + 300) && o.getKey() != player.getKeyPressed()) {
-                    if (difficulty.isPause()) {
-                        int i = 0;
-                        while (o.getKey() != player.getKeyPressed()) {
-                            if (i == 100) {
-                                o.playSound();
-                                i = 0;
+                else {
+                    o.forward(position);
+                    if ((o.getCaracX() == (position + 150))) {
+                        if (o.isFin()) {
+                            new Win();
+                            this.cancel();
+                        } else {
+                            if ((player.getAction().onBonus())) {
+                                player.gg(1000);
+                                score.setText(player.getScore() + "");
                             }
-                            try {
-                                Thread.sleep(30);
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
-                            i++;
                         }
-                        player.gg(500);
-                        score.setText(player.getScore() + "");
-                        player.setKeyPressed(-1);
-                    } else {
-                        player.hit();
                     }
-                } else {
-                    player.gg(500);
-                    score.setText(player.getScore() + "");
-                    player.setKeyPressed(-1);
+                    if (o.getCaracX() == (position + 300) && o.getKey() != player.getKeyPressed()) {
+                        if (difficulty.isPause()) {
+                            int i = 0;
+                            while (o.getKey() != player.getKeyPressed()) {
+                                if (i == 100) {
+                                    o.playSound();
+                                    i = 0;
+                                }
+                                try {
+                                    Thread.sleep(30);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                                i++;
+                            }
+                            player.gg(500);
+                            score.setText(player.getScore() + "");
+                            player.setKeyPressed(-1);
+                        } else {
+                            player.hit();
+                        }
+                    } else {
+                        if(o.getCaracX() == (position + 300) && o.getKey() == player.getKeyPressed()) {
+                            player.gg(500);
+                            score.setText(player.getScore() + "");
+                            player.setKeyPressed(-1);
+                        }
+                    }
                 }
             }
             for(Item i : items){
                 i.forward();
-                if(i.isEnd()){
+                if(i.getAction() != null && i.isEnd()){
                     i.setAction(null);
                 }
             }
