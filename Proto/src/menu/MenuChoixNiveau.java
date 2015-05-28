@@ -14,6 +14,7 @@ public class MenuChoixNiveau extends MenuAbstrait {
      */
     public MenuChoixNiveau(String title) {
         super(title);
+		System.out.println(Game.getINSTANCE());
     }
 
     @Override
@@ -26,7 +27,7 @@ public class MenuChoixNiveau extends MenuAbstrait {
     protected void lancerOption(int i) {
         this.dispose();
         switch (i){
-            case 0 : Game.getINSTANCE().launchLevel();break;
+            case 0 : Game.getINSTANCE().launchLevelV2(1);break;
             case 1 : Game.getINSTANCE().launchLevelV2(2);break;
             case 2 : Game.getINSTANCE().launchLevelV2(3);break;
             case 3 : new MenuJeu(nomJeu);break;

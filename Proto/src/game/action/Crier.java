@@ -60,7 +60,6 @@ public class Crier extends Action {
         }
         for (int i = 0; i <= 5; i++) {
             f = new File("../ressources/images/colo/Crie/crie" + i + ".png");
-            System.out.println("ImageHaut!");
             try {
                 IMAGESHAUT.add(ImageIO.read(f));
             } catch (IOException e) {

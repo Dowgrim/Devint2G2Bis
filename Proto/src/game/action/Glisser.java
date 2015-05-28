@@ -15,9 +15,9 @@ public class Glisser extends Action {
     private int time = 0;
 
     public Glisser(){
-        shiftY = 260;
-        shiftHeigt = -300;
-        shiftWidth = 50;
+        shiftY = 180;
+        shiftHeigt = -170;
+        shiftWidth = 100;
     }
 
     @Override

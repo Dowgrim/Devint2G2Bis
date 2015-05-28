@@ -213,7 +213,6 @@ public class Level extends JFrame {
                         } else {
                             if (o.getKey() > 0) {
                                 player.hit();
-                                System.out.println("lol");
                                 hearts.get(player.getlife()).setVisible(false);
                             }
                         }
