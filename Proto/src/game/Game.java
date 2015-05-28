@@ -42,7 +42,7 @@ public class Game {
     }
 
 
-    public void launchLevel(int l) {
+    public void launchLevel() {
         ArrayList<Obstacle> obstacles = new ArrayList<Obstacle>();
         int tailleLion = 250;
         int tailleAigle = 100;
@@ -84,12 +84,18 @@ public class Game {
             obj = array.getJSONObject(i);
             sons.put(obj.getInt("index"), obj.getString("path"));
         }
-
+        System.out.println(jsonLvl.getString("backGround")+ " " + obstacles.get(3));
         level = new Level(obstacles, sons, jsonLvl.getString("backGround"), difficulty);
     }
 
+    public Difficulty getDifficulty(){
+        return difficulty;
+    }
+
     public static void main(String[] args) {
-        new menu.MenuJeu("AnimalEscape");
+        //new menu.MenuJeu("AnimalEscape");
+        Game game = new Game(Difficulty.Easy);
+        game.launchLevelV2(1);
     }
 
 }

@@ -35,14 +35,14 @@ public class Courir extends Action {
     public static void initIMAGES(String chemin){
         File f;
         for (int i = 1; i <= 8; i++) {
-            f = new File("../ressources/images/colo/Séparation/course" + i + ".png");
+            f = new File("../ressources/images/colo/Course/course" + i + ".png");
             try {
                 IMAGESBAS.add(ImageIO.read(f));
             } catch (IOException e) {
                     e.printStackTrace();
             }
         }
-        f = new File("../ressources/images/colo/Séparation/corps.png");
+        f = new File("../ressources/images/colo/Course/corps.png");
         try {
             IMAGESHAUT.add(ImageIO.read(f));
         } catch (IOException e) {

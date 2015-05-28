@@ -22,17 +22,16 @@ public class Player extends JPanel{
     public Player(int paramCarac){
         action = new Courir();
         carac = new PlayerCarac(paramCarac);
-        setSize(50, 150);
     }
 
     @Override
     public void paintComponent(Graphics g){
         if(action.getImageHAUT() != null) {
-            g.drawImage(action.getImageHAUT(), 0, 0, getWidth(), getHeight() / 2, null);
-            g.drawImage(action.getImageBAS(), 0, 200, getWidth(), getHeight() / 2, null);
+            g.drawImage(action.getImageHAUT(), 0, 0, getWidth(), getHeight(), null);
+            g.drawImage(action.getImageBAS(), 0, 0, getWidth(), getHeight(), null);
         }
         else{
-            g.drawImage(action.getImageBAS(), 0, 200, getWidth(), getHeight(), null);
+            g.drawImage(action.getImageBAS(), 0, 0, getWidth(), getHeight(), null);
         }
     }
 
@@ -45,7 +44,7 @@ public class Player extends JPanel{
     }
 
     public void afficher(){
-        this.setBounds(200 + action.getShiftX(), 310 + action.getShiftY(), 190 + action.getShiftWidth(), 430 + action.getShiftHeigt());
+        this.setBounds(200 + action.getShiftX(), 380 + action.getShiftY(), 160 + action.getShiftWidth(), 300 + action.getShiftHeigt());
         repaint();
     }
 

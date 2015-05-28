@@ -42,8 +42,10 @@ public class BackGroundL extends JPanel{
 
     @Override
     public void paintComponent(Graphics g){
-        g.drawImage(background, 0, 0, 7000, 750, null);
-        g.drawImage(background, 7000, 0, 7000, 750, null);
+        g.setColor(Color.white);
+        g.fillRect(0, 0, getWidth(), getHeight());
+        g.drawImage(background, -20, 0, 7000, 750, null);
+        g.drawImage(background, 6900, 0, 7000, 750, null);
     }
 
     public void afficher(int pos){

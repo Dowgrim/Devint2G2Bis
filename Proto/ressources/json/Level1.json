@@ -1,7 +1,8 @@
 {   "Unlocked": "true",
 	"Obstacles": [
-	{"imageOK":"../ressources/images/Obstacle/chien.gif", "imageKO":"../ressources/images/Obstacle/chien KO.png", "posX":"250", "posY":"470", "width":"250", "height":"250", "key":"38", "sonOK":"../ressources/sons/chien.wav", "sonKO":"", "isFin":"false"},
+	{"imageOK":"../ressources/images/Obstacle/chien.gif", "imageKO":"../ressources/images/Obstacle/chien KO.png", "posX":"600", "posY":"470", "width":"250", "height":"250", "key":"38", "sonOK":"../ressources/sons/chien.wav", "sonKO":"", "isFin":"false"},
 	{"imageOK":"../ressources/images/Obstacle/chien.gif", "imageKO":"../ressources/images/Obstacle/chien KO.png", "posX":"1250", "posY":"470", "width":"250", "height":"250", "key":"38", "sonOK":"../ressources/sons/chien.wav", "sonKO":"", "isFin":"false"},
+	{"key":"-7", "sonOK":"../ressources/sons/Instructions/tutoSinge.wav"},
 	{"imageOK":"../ressources/images/Obstacle/singe.png", "imageKO":"../ressources/images/Obstacle/singe KO.png", "posX":"2475", "posY":"470", "width":"250", "height":"250", "key":"32", "sonOK":"../ressources/sons/singe.wav", "sonKO":"", "isFin":"false"},
 	{"imageOK":"../ressources/images/Obstacle/singe.png", "imageKO":"../ressources/images/Obstacle/singe KO.png", "posX":"3530", "posY":"470", "width":"250", "height":"250", "key":"32", "sonOK":"../ressources/sons/singe.wav", "sonKO":"", "isFin":"false"},
 	{"imageOK":"../ressources/images/Obstacle/chien.gif", "imageKO":"../ressources/images/Obstacle/chien KO.png", "posX":"4720", "posY":"470", "width":"250", "height":"250", "key":"38", "sonOK":"../ressources/sons/chien.wav", "sonKO":"", "isFin":"false"},
@@ -11,7 +12,6 @@
 	"Sons": [
 	{"index": "0", "path":"../ressources/sons/Histoire/introduction.wav"},
 	{"index": "1", "path":"../ressources/sons/Histoire/Foret/1 livre.wav"},
-	{"index": "2", "path":"../ressources/sons/Histoire/Foret/1 c'est trop bien.wav"},
 	{"index": "3", "path":"../ressources/sons/Histoire/Foret/1.wav"},
 	{"index": "4", "path":"../ressources/sons/Histoire/Foret/1 chien.wav"},
 	{"index": "5", "path":"../ressources/sons/Histoire/Foret/31Singe.wav"},

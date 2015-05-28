@@ -1,6 +1,7 @@
 package game;
 
 import game.action.Banana;
+import game.action.Crier;
 import game.action.Glisser;
 import game.action.Sauter;
 
@@ -64,10 +65,18 @@ public class Level extends JFrame {
                         player.setKeyPressed(e.getKeyCode());
                         break;
                     }
+                    case KeyEvent.VK_RIGHT: {
+                        player.setAction(new Crier());
+                        player.setKeyPressed(e.getKeyCode());
+                        break;
+                    }
                     case KeyEvent.VK_ENTER: {
                         if (!t.isAlive()) {
                             t.start();
                         }
+                        SIVOXDevint s = new SIVOXDevint();
+
+                        s.playWav(sons.get(0), false);
                         break;
                     }
                     case KeyEvent.VK_1: {
@@ -109,20 +118,16 @@ public class Level extends JFrame {
             o.setBounds(-400, 0, o.getCaracWidth(), o.getCaracHeight());
         }
 
-        Item banana = new Item(new ItemCarac(0, -500, 50, 50), null);
+        Item banana = new Item(new ItemCarac(0, 0, 50, 50), null);
         items.add(banana);
         contentPane.add(banana);
-        banana.setBounds(0, -500, 50, 50);
+        banana.setBounds(-500, 0, 50, 50);
 
         backGround = new BackGroundL(backGr);
         contentPane.add(backGround);
         backGround.setBounds(0, 0, getWidth(), getHeight());
 
         setVisible(true);
-
-        SIVOXDevint s = new SIVOXDevint();
-
-        s.playWav(sons.get(0), false);
 
         while(true){
             player.afficher();
@@ -134,7 +139,7 @@ public class Level extends JFrame {
             }
             backGround.afficher(position);
             try {
-                Thread.sleep(1);
+                Thread.sleep(2);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -198,20 +203,17 @@ public class Level extends JFrame {
                         player.hit();
                     }
                 } else {
-                    if (o.getKey() == player.getKeyPressed() && o.getCaracX() == (position + 300)) {
-                        player.gg(500);
-                        score.setText(player.getScore() + "");
-                        player.setKeyPressed(-1);
-                    }
+                    player.gg(500);
+                    score.setText(player.getScore() + "");
+                    player.setKeyPressed(-1);
                 }
             }
-            /*for(Item i : items){
+            for(Item i : items){
                 i.forward();
-                System.out.println("lol");
                 if(i.isEnd()){
-                    items.remove(i);
+                    i.setAction(null);
                 }
-            }*/
+            }
         }
     }
 

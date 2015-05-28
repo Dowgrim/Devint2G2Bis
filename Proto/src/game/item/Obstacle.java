@@ -43,10 +43,10 @@ public class Obstacle extends JPanel {
                 e.printStackTrace();
             }
             this.carac = carac;
-            this.key = key;
-            this.sound = sound;
             this.setSize(carac.getWidth(), carac.getHeight());
         }
+        this.key = key;
+        this.sound = sound;
     }
     
     public void paintComponent(Graphics g){
@@ -55,10 +55,6 @@ public class Obstacle extends JPanel {
 
     public ArrayList<Image> getImages() {
         return images;
-    }
-
-    public ItemCarac getCarac() {
-        return carac;
     }
 
     public int getKey() {
@@ -88,10 +84,6 @@ public class Obstacle extends JPanel {
     public void playSound(){
         SIVOXDevint s = new SIVOXDevint();
         s.playWav(sound, true);
-    }
-
-    public void setFin(){
-        fin = true;
     }
 
     public boolean isFin(){
